@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SanWebApp_Tests' do
+  pod 'SanWebApp', :path => '../'
+  
+  
+end
