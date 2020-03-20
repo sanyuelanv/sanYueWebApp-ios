@@ -9,7 +9,7 @@
 #import "SanYueActionSheetItem.h"
 #import "UIView+SanYueCategory.h"
 #import "UIColor+SanYueExtension.h"
-#import "SanYueButton.h"
+#import "SanYueLabelButton.h"
 typedef void(^SelectBlock)(int index);
 @interface SanYueActionSheetController ()
 @property (nonatomic,strong)SanYueActionSheetItem *item;
@@ -111,18 +111,27 @@ typedef void(^SelectBlock)(int index);
     // 列表 - 最多六个（已经在数据上进行截取）
     int index = 0;
     for (NSString *text in _item.itemList) {
-        SanYueButton *btn = [self createBtn:text andTextColor:_item.itemColor andTextDarkColor:_item.itemColorDark andIndex:index+1 andFrame:CGRectMake(0, height, WIDTH, h)];
+        SanYueLabelButton *btn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
+        [btn setUpBtn:text andTextColor:_item.itemColor andTextColorDark:_item.itemColorDark andTag:index+1 andFrame:CGRectMake(0, height, WIDTH, h)];
+        btn.backgroundColor = self.btnBgColor;
+        btn.normalBgColor = self.btnBgColor;
         [mainView addSubview:btn];
         if (index < _item.itemList.count - 1) {
             [btn addSubview:[self createLine:CGRectMake(0, h - 1, WIDTH, 1)]];
         }
+        [btn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
         height += h;
         index += 1;
     }
     height = height + 8;
     // 底部取消按钮
     CGFloat lastH = HEIGHT >= 812 ? h + 34 : h;
-    SanYueButton *btn = [self createBtn:_item.cancelText andTextColor:_item.cancelColor andTextDarkColor:_item.cancelColorDark andIndex:0 andFrame:CGRectMake(0, height, WIDTH, lastH)];
+    SanYueLabelButton *btn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
+    [btn setUpBtn:_item.cancelText andTextColor:_item.cancelColor andTextColorDark:_item.cancelColorDark andTag:0 andFrame:CGRectMake(0, height, WIDTH, lastH)];
+    btn.backgroundColor = self.btnBgColor;
+    btn.normalBgColor = self.btnBgColor;
+    [btn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
+    btn.myTextLabel.frame = CGRectMake(24, 0, WIDTH - 48,h);
     [mainView addSubview:btn];
     height += lastH;
     
@@ -130,34 +139,6 @@ typedef void(^SelectBlock)(int index);
     mainView.frame = CGRectMake(0, HEIGHT, WIDTH, height);
     [mainView addRoundedCorners:UIRectCornerTopLeft|UIRectCornerTopRight withRadius:12];
     
-}
--(SanYueButton *)createBtn:(NSString *)text andTextColor:(NSString *)textColor andTextDarkColor:(NSString *)textDarkColor andIndex:(int)index andFrame:(CGRect)frame{
-    UIColor *color = [UIColor colorWithHexString:textColor];
-    if (@available(iOS 13.0, *)) {
-        color = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-            if (traitCollection.userInterfaceStyle != UIUserInterfaceStyleDark) {
-                return [UIColor colorWithHexString:textColor];
-            }
-            else{
-                return [UIColor colorWithHexString:textDarkColor];
-            }
-        }];
-    }
-    SanYueButton *btn = [SanYueButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = self.btnBgColor;
-    btn.normalBgColor = self.btnBgColor;
-    btn.tag = index;
-    btn.frame = frame;
-    UILabel *textlabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 0, frame.size.width - 48, 56)];
-    textlabel.numberOfLines = 1;
-    textlabel.textColor = color;
-    textlabel.textAlignment = NSTextAlignmentCenter;
-    textlabel.font = [UIFont fontWithName:@"PingFangSC-Medium" size: 17];
-    textlabel.text = text;
-    textlabel.userInteractionEnabled = NO;
-    [btn addSubview:textlabel];
-    [btn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
-    return btn;
 }
 -(UIView *)createLine:(CGRect)frame{
     UIColor *lineColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
@@ -191,7 +172,7 @@ typedef void(^SelectBlock)(int index);
         CGRect frame =  weakSelf.mainView.frame;
         frame.origin.y = HEIGHT;
         weakSelf.mainView.frame = frame;
-        weakSelf.bgView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3];
+        weakSelf.bgView.backgroundColor = UIColor.clearColor;
     } completion:^(BOOL finished) {
         completion(finished);
         weakSelf.isShow = YES;

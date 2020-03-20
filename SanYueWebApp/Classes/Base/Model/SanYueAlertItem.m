@@ -15,9 +15,6 @@
         _content = [self getStringByName:@"content" and:dict andDef:@""];
         
         _confirmText = [self getStringByName:@"confirmText" and:dict andDef:@"确定"];
-        if (_confirmText.length > 4) {
-            _confirmText = [_confirmText substringToIndex:4];
-        }
         _confirmColor = [self getStringByName:@"confirmColor" and:dict andDef:@"#353535"];
         
         _showCancel = [self getBoolByName:@"showCancel" and:dict];
@@ -31,9 +28,6 @@
         
         if (_showCancel) {
             _cancelText = [self getStringByName:@"cancelText" and:dict andDef:@"取消"];
-            if (_cancelText.length > 4) {
-                _cancelText = [_confirmText substringToIndex:4];
-            }
             _cancelColor = [self getStringByName:@"cancelColor" and:dict andDef:@"#e64340"];
             _cancelColorDark = [self getStringByName:@"cancelColorDark" and:dict andDef:@"#CD5C5C"];
         }

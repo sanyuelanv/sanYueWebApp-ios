@@ -8,7 +8,7 @@
 #import "SanYueModalController.h"
 #import "SanYueAlertItem.h"
 #import "UIColor+SanYueExtension.h"
-#import "SanYueButton.h"
+#import "SanYueLabelButton.h"
 
 typedef void(^SelectBlock)(int index);
 @interface SanYueModalController ()
@@ -114,21 +114,9 @@ typedef void(^SelectBlock)(int index);
     CGFloat btnW = (mainW - 1) * 0.5;
     CGFloat btnY = CGRectGetMaxY(horizontalLine.frame);
     if (_item.showCancel) {
-        UIColor *cancelBtnColor = [UIColor colorWithHexString:_item.cancelColor];
-        if (@available(iOS 13.0, *)) {
-            cancelBtnColor = [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull traitCollection) {
-                if (traitCollection.userInterfaceStyle != UIUserInterfaceStyleDark) { return [UIColor colorWithHexString:weakSelf.item.cancelColor]; }
-                else{ return [UIColor colorWithHexString:weakSelf.item.cancelColorDark]; }
-            }];
-        }
-        SanYueButton *cancelBtn = [SanYueButton buttonWithType:UIButtonTypeCustom];
-        cancelBtn.tag = 0;
-        [cancelBtn setTitle:_item.cancelText forState:UIControlStateNormal];
-        [cancelBtn setTitleColor:cancelBtnColor forState:UIControlStateNormal];
-        [cancelBtn setTitleColor:cancelBtnColor forState:UIControlStateHighlighted];
-        cancelBtn.titleLabel.font = titleView.font;
+        SanYueLabelButton *cancelBtn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
+        [cancelBtn setUpBtn:_item.cancelText andTextColor:_item.cancelColor andTextColorDark:_item.cancelColorDark andTag:0 andFrame:CGRectMake(0, btnY, btnW, 56)];
         [cancelBtn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
-        cancelBtn.frame = CGRectMake(0, btnY, btnW, 56);
         [_mainView addSubview:cancelBtn];
         // line
         UIView *verticalLine = [[UIView alloc] initWithFrame:CGRectMake(btnW, btnY, 1, 56)];
@@ -139,13 +127,8 @@ typedef void(^SelectBlock)(int index);
         btnW = mainW;
     }
     // okBtn
-    UIButton *okBtn = [SanYueButton buttonWithType:UIButtonTypeCustom];
-    okBtn.tag = 1;
-    okBtn.frame = CGRectMake(btnW == mainW ? 0 : btnW + 1, btnY, btnW, 56);
-    [okBtn setTitle:_item.confirmText forState:UIControlStateNormal];
-    [okBtn setTitleColor:okBtnColor forState:UIControlStateNormal];
-    [okBtn setTitleColor:okBtnColor forState:UIControlStateHighlighted];
-    okBtn.titleLabel.font = titleView.font;
+    SanYueLabelButton *okBtn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
+    [okBtn setUpBtn:_item.confirmText andTextColor:_item.confirmColor andTextColorDark:_item.confirmColorDark andTag:1 andFrame:CGRectMake(btnW == mainW ? 0 : btnW + 1, btnY, btnW, 56)];
     [okBtn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
     [_mainView addSubview:okBtn];
     

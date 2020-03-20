@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,7 +55,7 @@
 		4F187A9204AE2C53DD8770A6AAA06E2C /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DA346787D49AB7A8146BD85DEAF4D1 /* SSZipArchive-dummy.m */; };
 		50355513F45471D3B651DFF05DECD8EB /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 12805A4DDE91A9A0247FA4AD48F04922 /* crypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5243967EC71C9ABBD348B6F32785BD84 /* UIView+SanYueCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = CD30DEAC52F2EC2BE357631BC089190A /* UIView+SanYueCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		534E4B6421D1BEF4B9D0885F362EE791 /* SanYueButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD617B751FFD0E765539A19CF92B767 /* SanYueButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		534E4B6421D1BEF4B9D0885F362EE791 /* SanYueLabelButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD617B751FFD0E765539A19CF92B767 /* SanYueLabelButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5587E3A55E3C96DC181C1E20F7C6E8D2 /* SanYueAppInfoItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A60B93C7BD7500F02760347666648ACA /* SanYueAppInfoItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5626C5D8D0F485F26B817C58CC262CE6 /* SanYueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 602EB76654CA55C784BFBB80379A8A8B /* SanYueManager.m */; };
 		576186FB1892184FD5AA361F82F3BE2D /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 3EA243DBA91388EAADE850CB05CA87AE /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -89,7 +89,7 @@
 		7CC6F20B93D92D690915783B4C090418 /* SanYueModalController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0202D34F76EB0D8A0728885E1A3DFFDA /* SanYueModalController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7D274ADB83139EC2D434CD04C1B5F130 /* SanYueAlertItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1699C85068D481D27512D901CAD6701A /* SanYueAlertItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7D80F293E0D0160FD33D353B80E7D92A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 469F229C040A0A32FC89BA6F18B08FAB /* UIWebView+AFNetworking.m */; };
-		7F22D663DB4AA2F0B54EE08B2076F063 /* SanYueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C8C167C59547C7402615B2579941 /* SanYueButton.m */; };
+		7F22D663DB4AA2F0B54EE08B2076F063 /* SanYueLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C36C8C167C59547C7402615B2579941 /* SanYueLabelButton.m */; };
 		8048295D3D0AE96CFB0C3A4EA28B7416 /* SanYueWebAppItem.h in Headers */ = {isa = PBXBuildFile; fileRef = CB37AC11B16EDB83D978D1C9EB589567 /* SanYueWebAppItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		82090786766A0BCE7B73EAD8D12FF0CC /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1ED5C86633885254D1FCB0089939AE /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		834D962D86A4EF1CFF861CC2EFF48B0D /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = DE3247FBA4D79E2AE04D39ADA1B9F27D /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -213,10 +213,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CF89DF7C4F586EBDC9E609C10BAD4D /* vconsole.js */ = {isa = PBXFileReference; includeInIndex = 1; name = vconsole.js; path = SanYueWebApp/Assets/vconsole.js; sourceTree = "<group>"; };
+		00CF89DF7C4F586EBDC9E609C10BAD4D /* vconsole.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = vconsole.js; path = SanYueWebApp/Assets/vconsole.js; sourceTree = "<group>"; };
 		0202D34F76EB0D8A0728885E1A3DFFDA /* SanYueModalController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueModalController.h; sourceTree = "<group>"; };
 		02ABA6A08540EB5F0CDFE9135FE98218 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
-		03576F9D09C087752BDAF19D069EA661 /* libSSZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSSZipArchive.a; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		03576F9D09C087752BDAF19D069EA661 /* libSSZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04469B1CA158DF0D59867DBF1EB90CDF /* SanYueHttpManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueHttpManager.h; sourceTree = "<group>"; };
 		04D20AC0D79E07EC3A413C973A24EE12 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
 		051DB902CDA9A750D7745C305935CAB8 /* SanYueDismissAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueDismissAnimation.m; sourceTree = "<group>"; };
@@ -225,14 +225,14 @@
 		0D1250C4D33F3E90C549B1774B58C6F8 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
 		0DAA96EDF24CB2EFABD66FDD00764AA4 /* SanYueMultiPickListItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueMultiPickListItem.m; sourceTree = "<group>"; };
 		11ADF0A770AE39BF93B4D642BABF79D0 /* aes_ni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ni.h; path = SSZipArchive/minizip/aes/aes_ni.h; sourceTree = "<group>"; };
-		12805A4DDE91A9A0247FA4AD48F04922 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
+		12805A4DDE91A9A0247FA4AD48F04922 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
 		128FAC7E67B9AB3E60422C9C376B9E5F /* SanYueMainViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SanYueMainViewController.h; path = SanYueWebApp/Classes/SanYueMainViewController.h; sourceTree = "<group>"; };
 		13781418C1BD24C17E4D197397494F6E /* SanYueAppConfigItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueAppConfigItem.m; sourceTree = "<group>"; };
 		140013AE1D5E06E1BAFE062090591775 /* SanYueRouterItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueRouterItem.m; sourceTree = "<group>"; };
 		14238EBD7244760646510728F547EB85 /* SanYueLoadView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueLoadView.m; sourceTree = "<group>"; };
 		1597F71D094BC32A493740748D7180B8 /* SanYueAppViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SanYueAppViewController.m; path = SanYueWebApp/Classes/SanYueAppViewController.m; sourceTree = "<group>"; };
 		1699C85068D481D27512D901CAD6701A /* SanYueAlertItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueAlertItem.h; sourceTree = "<group>"; };
-		1AED244DA2EA1CF3F615D30458DFDACD /* libPods-testWebApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-testWebApp.a"; path = "libPods-testWebApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AED244DA2EA1CF3F615D30458DFDACD /* libPods-testWebApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testWebApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE8D41E88D05EF73C0BB832A3583505 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		1D9D353C4A87569CE7EDD05D974D1231 /* SanYuePickItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYuePickItem.m; sourceTree = "<group>"; };
 		2489095C96A5E4762B8D9D2B1E82D4C8 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		26C3E782113BA01E06917E952F944434 /* SanYueBaseAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueBaseAlertController.h; sourceTree = "<group>"; };
 		279C09373C881B5A8EE13D926A8B3385 /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/minizip/aes/brg_types.h; sourceTree = "<group>"; };
 		2837207F7AB34A93F1DB37A32E18610D /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/minizip/aes/hmac.h; sourceTree = "<group>"; };
-		29120FB4284E4E8A52528D0D8E7E1717 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
+		29120FB4284E4E8A52528D0D8E7E1717 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
 		2A933A4BE6D61C2167E1499A2A3B9C35 /* Pods-testWebApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-testWebApp.release.xcconfig"; sourceTree = "<group>"; };
 		2AE0D0FE6A5588BC337539D6CC20002A /* SanYueAlertAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueAlertAnimation.m; sourceTree = "<group>"; };
 		2AF7EE0D26C9BAF9CBCEBFE9195415B8 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
@@ -251,14 +251,14 @@
 		2C1B2EB918F89CA6FFA5448E74EAF21C /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = SSZipArchive.modulemap; path = ../../Headers/Public/SSZipArchive/SSZipArchive.modulemap; sourceTree = "<group>"; };
 		317A4746CBFDB0522C143146AA0BC304 /* SanYueLoadView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueLoadView.h; sourceTree = "<group>"; };
 		31E7066EB7BAE10B28C3DC14AE53926F /* SanYuePickItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYuePickItem.h; sourceTree = "<group>"; };
-		324B70708069BCAD4B97E6495D988F2F /* libSanYueWebApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSanYueWebApp.a; path = libSanYueWebApp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		324B70708069BCAD4B97E6495D988F2F /* libSanYueWebApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSanYueWebApp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		336AE59A368FFD56A18567D40306188E /* SanYueDismissAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueDismissAnimation.h; sourceTree = "<group>"; };
 		337029FE27496D9BF8CFAAE6224D08DF /* SanYueActionSheetController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueActionSheetController.m; sourceTree = "<group>"; };
-		33A95A4F57988A194A1B39D3C99752C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		33A95A4F57988A194A1B39D3C99752C8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		359D88A631DBE036EDD18CE75B1D2058 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		3C1BF6374A1B54DA2767BE73F6BCFF17 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
-		3DD617B751FFD0E765539A19CF92B767 /* SanYueButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueButton.h; sourceTree = "<group>"; };
-		3EA243DBA91388EAADE850CB05CA87AE /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
+		3DD617B751FFD0E765539A19CF92B767 /* SanYueLabelButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueLabelButton.h; sourceTree = "<group>"; };
+		3EA243DBA91388EAADE850CB05CA87AE /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
 		3ECF13A22EC30047E0F695491E072D3E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		3F5D86CB57564842EA1A9A4941B82572 /* UIColor+SanYueExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SanYueExtension.m"; sourceTree = "<group>"; };
 		402E7DF4FCAAEC7F35885A7C914ABB5B /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
@@ -269,28 +269,28 @@
 		44DA346787D49AB7A8146BD85DEAF4D1 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
 		469F229C040A0A32FC89BA6F18B08FAB /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		4996DA2312E51A14276B7F5871868894 /* SanYueBaseAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueBaseAlertController.m; sourceTree = "<group>"; };
-		4C36C8C167C59547C7402615B2579941 /* SanYueButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueButton.m; sourceTree = "<group>"; };
+		4C36C8C167C59547C7402615B2579941 /* SanYueLabelButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueLabelButton.m; sourceTree = "<group>"; };
 		4D29E70E81616A319DB1082F6FFBDA1F /* SanYueActionSheetItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueActionSheetItem.m; sourceTree = "<group>"; };
 		4DEBA291ECFCF1CFA44D4751869B6717 /* SanYueWebAppItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueWebAppItem.m; sourceTree = "<group>"; };
-		4E06B992B059845FBECB38C553688DEF /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
+		4E06B992B059845FBECB38C553688DEF /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
 		529A6061FEEE59B33CEFD105E9077E9E /* SanYueAlertItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueAlertItem.m; sourceTree = "<group>"; };
 		53490B6E857AF9A3EDD3509662F17E5E /* SanYueScriptMessageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueScriptMessageManager.m; sourceTree = "<group>"; };
 		552DBE362CEB0FB6142E1676F2FAA8B0 /* Pods-testWebApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-testWebApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		570B02C3877BA1C98BC3D6E45E4601ED /* SanYueNavView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueNavView.h; sourceTree = "<group>"; };
 		598AE1B68E532C76F02BC9748EE84C91 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
-		5D078062EFFA72F709BDB18813B15BDA /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		5D078062EFFA72F709BDB18813B15BDA /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
 		5E18CA42A8325C096616F42EE144BB10 /* SanYueToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueToast.h; sourceTree = "<group>"; };
 		5F0013E51137B4AE7032B1E388DAE813 /* SanYueScriptMessageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueScriptMessageManager.h; sourceTree = "<group>"; };
-		5F15FC4122FDE40A76CA0345C37A2E43 /* SanYueWebApp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SanYueWebApp.bundle; path = "SanYueWebApp-SanYueWebApp.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F15FC4122FDE40A76CA0345C37A2E43 /* SanYueWebApp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanYueWebApp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		600D2ADC57010656738113D6E2FE8605 /* SanYueAlertAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueAlertAnimation.h; sourceTree = "<group>"; };
 		602EB76654CA55C784BFBB80379A8A8B /* SanYueManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueManager.m; sourceTree = "<group>"; };
 		60A0CE701DCF8B88E645CE0E83B0C644 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
 		64641F35E12FC0F7121D10F68BE13FF0 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
-		6468BE497C9083568914AB421EA33027 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6468BE497C9083568914AB421EA33027 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		655E185A63484AB16AEAB3577BD84F02 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
 		66820B22635D4877C265FA16ACD297F5 /* UIImage+SanYueExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SanYueExtension.m"; sourceTree = "<group>"; };
 		67702B15B2AF09F7673EACEC94FE6678 /* SanYueActionSheetItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueActionSheetItem.h; sourceTree = "<group>"; };
-		68E4C8C629175D3B16308BD6CBEBD4BB /* SanYueWebApp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SanYueWebApp.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		68E4C8C629175D3B16308BD6CBEBD4BB /* SanYueWebApp.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SanYueWebApp.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6950D82A8483A8DD7DA0E70BEF02D7A7 /* SanYueToastItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueToastItem.h; sourceTree = "<group>"; };
 		6967BECC36D86CF3F152240CCF121E6E /* SanYueCapsuleBtnView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueCapsuleBtnView.m; sourceTree = "<group>"; };
 		6AAA0078E0B9A79820AD48303949EC64 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
@@ -298,12 +298,12 @@
 		6F260F10991C11D853A0324B146E7109 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/minizip/aes/pwd2key.h; sourceTree = "<group>"; };
 		6FAEBB3CB522177DBDD0CC11145FB7DE /* ResourceBundle-SanYueWebApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SanYueWebApp-Info.plist"; sourceTree = "<group>"; };
 		712CDE1A052C4D4BDE8A15098503C14B /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
-		73185B13456121BBB25305E532C3002F /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		73185B13456121BBB25305E532C3002F /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
 		73A6BC5A78801231FF2ACE6A14D555AA /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/minizip/aes/brg_endian.h; sourceTree = "<group>"; };
 		7666A7AD573A4C569B03852A0CA8E2FE /* SanYueBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueBaseObject.m; sourceTree = "<group>"; };
 		794BD4B2213FDBD780DE0E3F25010117 /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/minizip/aes/aestab.h; sourceTree = "<group>"; };
 		7BF7C288294CB5653883E11D33A8139A /* SanYueWebApp-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SanYueWebApp-prefix.pch"; sourceTree = "<group>"; };
-		7DD383ABCDC6B3B548A400FD6F3F2102 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
+		7DD383ABCDC6B3B548A400FD6F3F2102 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
 		83AE9FFE185611D0F05CF1685153A54C /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		84869C9B2CA7B99143B6824117FD3144 /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/minizip/aes/prng.h; sourceTree = "<group>"; };
 		86C617F10C9E263BE84274CD38C27282 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
@@ -312,20 +312,20 @@
 		8CD22C511850087F3316438FCBD642FC /* SanYueMainViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SanYueMainViewController.m; path = SanYueWebApp/Classes/SanYueMainViewController.m; sourceTree = "<group>"; };
 		8D4ACB92BB8056246E4380F763E1B3D4 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
 		8F6A78EC19175012E36D915D585AEB49 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		8FF7ABC98A5A89041795276F619059C3 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		8FF7ABC98A5A89041795276F619059C3 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
 		90B216BAF301566AB04C1AD9024A05E5 /* SanYueErrorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueErrorView.h; sourceTree = "<group>"; };
 		9283278C9B75775E7B6CE04AE0BFCC00 /* SanYueRouterItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueRouterItem.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941B3C3CE5996B470F0EA95054D25C78 /* SanYueCacheItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueCacheItem.h; sourceTree = "<group>"; };
 		956467422B493E24E27D1ADAA4B2A196 /* Pods-testWebApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-testWebApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		9E2CB9CF489B49EE5D6494115217248A /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
-		9E6FDBE26E433F239F2579EC7454C984 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
+		9E6FDBE26E433F239F2579EC7454C984 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
 		9E6FF03719B8ECAAF4639ECDAE637548 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		9EC99E908C5740DA08982AFC67A6187A /* SanYueAppViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SanYueAppViewController.h; path = SanYueWebApp/Classes/SanYueAppViewController.h; sourceTree = "<group>"; };
 		9F783FDA11B64073D1710E531B34E911 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		9FD6309266D22BBA2CC6B97125155376 /* SanYueJavaScripMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueJavaScripMethod.h; sourceTree = "<group>"; };
 		A14579F3D8C35AB2BC4A2CD77CB93511 /* SanYueErrorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueErrorView.m; sourceTree = "<group>"; };
-		A1B5C4B3F92B2B34EF2254254D9B89B6 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
+		A1B5C4B3F92B2B34EF2254254D9B89B6 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
 		A21B65D310D5B7C828117DB61FB77738 /* SanYueToastItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueToastItem.m; sourceTree = "<group>"; };
 		A28F5CBB67E0C04D825650EF67F0D557 /* ioapi_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_buf.h; path = SSZipArchive/minizip/ioapi_buf.h; sourceTree = "<group>"; };
 		A52773E1D1092A65CC23AF05DB20CFBD /* sanyue_webapp.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = sanyue_webapp.xcassets; path = SanYueWebApp/Assets/sanyue_webapp.xcassets; sourceTree = "<group>"; };
@@ -343,12 +343,12 @@
 		B517CF53BC24DAD9936E3F8CE5E02E7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		B584808E13227DC20C4A5A90AF90B4C9 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		B7D23A4B6C6933E5A1779C747E9BAE34 /* SanYueAppInfoItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueAppInfoItem.m; sourceTree = "<group>"; };
-		BABA863C3294031680D2D2CDC8124421 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
+		BABA863C3294031680D2D2CDC8124421 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
 		BB22FE2B6A5021ABFFC93F76CBCF69DF /* NSString+SanYueExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+SanYueExtension.h"; sourceTree = "<group>"; };
 		BB862DE07FE7BE4982905E424C51A330 /* SanYueWebApp.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SanYueWebApp.xcconfig; sourceTree = "<group>"; };
 		BB8CB6DBC053064F8F7B957CF2BC1A1A /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		BD39274E291E670F8A25FA6098C3D664 /* Pods-testWebApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-testWebApp.debug.xcconfig"; sourceTree = "<group>"; };
-		BEE80E47C3069249CEFB995EB3807E82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		BEE80E47C3069249CEFB995EB3807E82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BFE28640F243054BDC6D1DFBDC1B6CDF /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C145737D230522B81F7167E214CA2397 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		C1CF996871D3C93456DD5053D8DF40C8 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -356,11 +356,11 @@
 		C408096E7ACBDE8CF5CC3F0B23E3AA9E /* SanYueJavaScripMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueJavaScripMethod.m; sourceTree = "<group>"; };
 		C6A3074A676289686EEA76A9336D7CA4 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
 		C72527FDA83EEF3CA25C68A5AD9F3910 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		C983FFA31205C9D8E7AFEEEB2A49D7F9 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
+		C983FFA31205C9D8E7AFEEEB2A49D7F9 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
 		CB37AC11B16EDB83D978D1C9EB589567 /* SanYueWebAppItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueWebAppItem.h; sourceTree = "<group>"; };
 		CBF6ED44F6984359A8745CA6C16419FB /* SanYueCapsuleBtnView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYueCapsuleBtnView.h; sourceTree = "<group>"; };
 		CD30DEAC52F2EC2BE357631BC089190A /* UIView+SanYueCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+SanYueCategory.h"; sourceTree = "<group>"; };
-		CDA168D537741B5A72AEE96114E16560 /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
+		CDA168D537741B5A72AEE96114E16560 /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
 		CF83F91536C62186A06148F3326CD133 /* SanYueCacheItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueCacheItem.m; sourceTree = "<group>"; };
 		D1B0BC660CF5FA97C83CDB0FF223888F /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		D476E41EF54277368EDF2E032ED65C77 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
@@ -383,13 +383,13 @@
 		EA3D114C0DAD2F9E103BCD41A9AF25FB /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		EB0EA53631913A01128E1BB828042943 /* SanYuePickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SanYuePickerViewController.h; sourceTree = "<group>"; };
 		EC733B9B929A72B37C2230B715C4CB6C /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
-		ECF0385E4C01D79E09988172F3B6A9F8 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
+		ECF0385E4C01D79E09988172F3B6A9F8 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
 		ED1ED5C86633885254D1FCB0089939AE /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SSZipArchive-umbrella.h"; path = "../../Headers/Public/SSZipArchive/SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
 		EE2092386C0FE52DE24608DE383E7143 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		F0DA2DB1BC704293AFD0F471AC36EBAE /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
+		F0DA2DB1BC704293AFD0F471AC36EBAE /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
 		F43A5C39179819F47FC03B3A09EB9346 /* SanYuePanInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYuePanInteractiveTransition.m; sourceTree = "<group>"; };
 		F66AFF99A91FE023F058DB0E6D29A4A6 /* Pods-testWebApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-testWebApp-resources.sh"; sourceTree = "<group>"; };
-		F9B7DE31AFA4BD35E3AAA77F231010B1 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
+		F9B7DE31AFA4BD35E3AAA77F231010B1 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
 		FB09C88064CDC71F663D76CF2C4D7577 /* SanYueHttpItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueHttpItem.m; sourceTree = "<group>"; };
 		FBC7B8E586196A1C0D826F68A86F115E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		FC3AF802FE080418378686BECCF616C4 /* SanYueNavView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SanYueNavView.m; sourceTree = "<group>"; };
@@ -452,7 +452,6 @@
 				EB0EA53631913A01128E1BB828042943 /* SanYuePickerViewController.h */,
 				B0CBD15214B6037D3386FF625CE04DA3 /* SanYuePickerViewController.m */,
 			);
-			name = Controller;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -467,7 +466,6 @@
 				EB691E8CE289E93505EC1B94A96E7E52 /* Support Files */,
 				30F69557B4FD34DD54C05D3AB93758EC /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -518,7 +516,6 @@
 				A21B65D310D5B7C828117DB61FB77738 /* SanYueToastItem.m */,
 				AF59907305640E9868C44AD3B0304663 /* help */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -644,7 +641,6 @@
 				5F0013E51137B4AE7032B1E388DAE813 /* SanYueScriptMessageManager.h */,
 				53490B6E857AF9A3EDD3509662F17E5E /* SanYueScriptMessageManager.m */,
 			);
-			name = Manager;
 			path = Manager;
 			sourceTree = "<group>";
 		};
@@ -687,7 +683,6 @@
 				CB37AC11B16EDB83D978D1C9EB589567 /* SanYueWebAppItem.h */,
 				4DEBA291ECFCF1CFA44D4751869B6717 /* SanYueWebAppItem.m */,
 			);
-			name = help;
 			path = help;
 			sourceTree = "<group>";
 		};
@@ -734,7 +729,6 @@
 				0D1250C4D33F3E90C549B1774B58C6F8 /* ZipArchive.h */,
 				500A93ED5294BF3A544BA0A594CF760F /* Support Files */,
 			);
-			name = SSZipArchive;
 			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
@@ -780,7 +774,6 @@
 				2BE846CDFE61F07932C6D040A061ADA8 /* UIImage+SanYueExtension.h */,
 				66820B22635D4877C265FA16ACD297F5 /* UIImage+SanYueExtension.m */,
 			);
-			name = Extension;
 			path = Extension;
 			sourceTree = "<group>";
 		};
@@ -811,8 +804,8 @@
 		E2EB8F8C3692A1DD188B39C0219F667A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3DD617B751FFD0E765539A19CF92B767 /* SanYueButton.h */,
-				4C36C8C167C59547C7402615B2579941 /* SanYueButton.m */,
+				3DD617B751FFD0E765539A19CF92B767 /* SanYueLabelButton.h */,
+				4C36C8C167C59547C7402615B2579941 /* SanYueLabelButton.m */,
 				CBF6ED44F6984359A8745CA6C16419FB /* SanYueCapsuleBtnView.h */,
 				6967BECC36D86CF3F152240CCF121E6E /* SanYueCapsuleBtnView.m */,
 				90B216BAF301566AB04C1AD9024A05E5 /* SanYueErrorView.h */,
@@ -826,7 +819,6 @@
 				5E18CA42A8325C096616F42EE144BB10 /* SanYueToast.h */,
 				6D01ADE4D9026017FA33163E4CFD0BC7 /* SanYueToast.m */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -840,7 +832,6 @@
 				B21FBD3CB31881A165278AB8023E16B5 /* SanYuePanInteractiveTransition.h */,
 				F43A5C39179819F47FC03B3A09EB9346 /* SanYuePanInteractiveTransition.m */,
 			);
-			name = Transition;
 			path = Transition;
 			sourceTree = "<group>";
 		};
@@ -861,7 +852,6 @@
 				CD30DEAC52F2EC2BE357631BC089190A /* UIView+SanYueCategory.h */,
 				DA592F64A4672347788AFBDF202149FD /* UIView+SanYueCategory.m */,
 			);
-			name = CateGory;
 			path = CateGory;
 			sourceTree = "<group>";
 		};
@@ -871,7 +861,6 @@
 				D1B0BC660CF5FA97C83CDB0FF223888F /* Reachability.h */,
 				BFE28640F243054BDC6D1DFBDC1B6CDF /* Reachability.m */,
 			);
-			name = Helper;
 			path = Helper;
 			sourceTree = "<group>";
 		};
@@ -902,7 +891,7 @@
 				3F83442B080063B5A51CBC6C2453BC4E /* SanYueAppViewController.h in Headers */,
 				B25AF6A5066B366019B8308456F1B95D /* SanYueBaseAlertController.h in Headers */,
 				4786DC8B5968F7F4376B775F24F38673 /* SanYueBaseObject.h in Headers */,
-				534E4B6421D1BEF4B9D0885F362EE791 /* SanYueButton.h in Headers */,
+				534E4B6421D1BEF4B9D0885F362EE791 /* SanYueLabelButton.h in Headers */,
 				DD3F48485A1C48C26DB684809177D784 /* SanYueCacheItem.h in Headers */,
 				BDF854C92086E76CBAB04642A36FF460 /* SanYueCapsuleBtnView.h in Headers */,
 				C3D3A7DAE74BBFEEEEAD5E544A8E00D8 /* SanYueDismissAnimation.h in Headers */,
@@ -1101,6 +1090,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -1208,7 +1198,7 @@
 				A8452BA39A6E7DCA4CB7007C68819667 /* SanYueAppViewController.m in Sources */,
 				E71D48F5D8C327EE1CCA214CCD99C3B2 /* SanYueBaseAlertController.m in Sources */,
 				D6D200A10010C3D9AEC6CF9D672C6A8C /* SanYueBaseObject.m in Sources */,
-				7F22D663DB4AA2F0B54EE08B2076F063 /* SanYueButton.m in Sources */,
+				7F22D663DB4AA2F0B54EE08B2076F063 /* SanYueLabelButton.m in Sources */,
 				9F705C9562E60C461EA37F9B475206F6 /* SanYueCacheItem.m in Sources */,
 				3F9AE2477965ADCA3EC6BCC7241ABBCB /* SanYueCapsuleBtnView.m in Sources */,
 				BA37DECBE8A095788C0F4E16FB2F6C0D /* SanYueDismissAnimation.m in Sources */,
