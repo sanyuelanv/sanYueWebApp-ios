@@ -1,0 +1,37 @@
+{
+  "name": "SanYueWebApp",
+  "version": "0.1.0",
+  "summary": "A short description of SanYueWebApp.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sanyuelanv/SanYueWebApp",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sanyuelanv": "244352437@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/sanyuelanv/SanYueWebApp.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SanYueWebApp/Classes/**/*",
+  "frameworks": "AudioToolbox",
+  "dependencies": {
+    "AFNetworking": [
+      "~> 3.2"
+    ],
+    "SSZipArchive": [
+      "~> 2.1.4"
+    ]
+  },
+  "resource_bundles": {
+    "SanYueWebApp": [
+      "SanYueWebApp/Assets/*.xcassets",
+      "SanYueWebApp/Assets/*.js"
+    ]
+  }
+}
