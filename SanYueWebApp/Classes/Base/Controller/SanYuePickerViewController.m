@@ -9,6 +9,7 @@
 #import "SanYueAlertAnimation.h"
 #import "SanYuePickItem.h"
 #import "SanYueMultiPickListItem.h"
+#import "UIView+SanYueCategory.h"
 typedef void(^SelectBlock)(int index,int type);
 typedef void(^SelectMultiBlock)(NSArray<NSNumber *> *value,int type);
 typedef void(^SelectTimeBlock)(NSString *res,int type);
@@ -122,6 +123,7 @@ typedef void(^SelectTimeBlock)(NSString *res,int type);
     [okBtn addTarget:self action:@selector(okBtnEvent) forControlEvents:UIControlEventTouchUpInside];
     okBtn.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Medium" size: 18];
     [mainView addSubview:okBtn];
+    [mainView addRoundedCorners:UIRectCornerTopLeft|UIRectCornerTopRight withRadius:12];
 }
 -(void)setUpNormalView{
     self.view.backgroundColor = UIColor.clearColor;

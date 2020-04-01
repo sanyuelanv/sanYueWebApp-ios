@@ -53,11 +53,12 @@ API_AVAILABLE(ios(10.0))
     if([jsMethods containsObject:message.name]){
         // 默认的方法
         SEL selector = NSSelectorFromString([NSString stringWithFormat:@"%@:",message.name]);
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         @try { [self performSelector:selector withObject:message.body];}
-        @catch (NSException *exception) {
-            //NSLog(@"--- %@",exception.reason);
-        }
+        @catch (NSException *exception) {}
         @finally {}
+        #pragma clang diagnostic pop
     }
     else{
         if (self.scriptDelegate) {

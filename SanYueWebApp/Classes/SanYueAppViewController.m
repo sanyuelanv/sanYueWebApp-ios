@@ -106,7 +106,10 @@
     self.transitioningDelegate = self;
     [self.panInteractiveTransition panToDismiss:self];
     
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wundeclared-selector"
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    #pragma clang diagnostic pop
     
     [self.view addGestureRecognizer:pan];
     pan.delegate = self;
