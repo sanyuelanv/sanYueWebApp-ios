@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong)NSDate *timeValue;
 @property (nonatomic,strong)NSString *originTimeValue;
 
+@property(nonatomic,assign) BOOL backGroundCancel;
+
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end
 

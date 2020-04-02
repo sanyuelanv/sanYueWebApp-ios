@@ -13,6 +13,7 @@
     if (self) {
         _listenChange = [self getBoolByName:@"listenChange" and:dict];
         NSString *mode = [self getStringByName:@"mode" and:dict andDef:@"normal"];
+        _backGroundCancel = [self getBoolByName:@"backGroundCancel" and:dict];
         
         NSString *senseMode = [self getStringByName:@"senseMode" and:dict andDef:@"auto"];
         if ([senseMode isEqualToString:@"light"]) { _senseMode = 1; }

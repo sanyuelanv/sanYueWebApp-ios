@@ -98,8 +98,10 @@ typedef void(^SelectTimeBlock)(NSString *res,int type);
     
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, bgHeight)];
     bgView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backEvent:)];
-    [bgView addGestureRecognizer:tap];
+    if (_item.backGroundCancel) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(backEvent:)];
+        [bgView addGestureRecognizer:tap];
+    }
     bgView.backgroundColor = UIColor.clearColor;
     [self.view addSubview:bgView];
     _bgView = bgView;
