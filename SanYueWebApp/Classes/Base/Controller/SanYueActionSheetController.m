@@ -77,7 +77,7 @@ typedef void(^SelectBlock)(int index);
     }
     // bg
     UIButton *bgView = [UIButton buttonWithType:UIButtonTypeCustom];
-    bgView.tag = -1;
+    bgView.tag = -2;
     bgView.frame = self.view.bounds;
     bgView.backgroundColor = UIColor.clearColor;
     [bgView addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
@@ -112,7 +112,7 @@ typedef void(^SelectBlock)(int index);
     int index = 0;
     for (NSString *text in _item.itemList) {
         SanYueLabelButton *btn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
-        [btn setUpBtn:text andTextColor:_item.itemColor andTextColorDark:_item.itemColorDark andTag:index+1 andFrame:CGRectMake(0, height, WIDTH, h)];
+        [btn setUpBtn:text andTextColor:_item.itemColor andTextColorDark:_item.itemColorDark andTag:index andFrame:CGRectMake(0, height, WIDTH, h)];
         btn.backgroundColor = self.btnBgColor;
         btn.normalBgColor = self.btnBgColor;
         [mainView addSubview:btn];
@@ -127,7 +127,7 @@ typedef void(^SelectBlock)(int index);
     // 底部取消按钮
     CGFloat lastH = HEIGHT >= 812 ? h + 34 : h;
     SanYueLabelButton *btn = [SanYueLabelButton buttonWithType:UIButtonTypeCustom];
-    [btn setUpBtn:_item.cancelText andTextColor:_item.cancelColor andTextColorDark:_item.cancelColorDark andTag:0 andFrame:CGRectMake(0, height, WIDTH, lastH)];
+    [btn setUpBtn:_item.cancelText andTextColor:_item.cancelColor andTextColorDark:_item.cancelColorDark andTag:-1 andFrame:CGRectMake(0, height, WIDTH, lastH)];
     btn.backgroundColor = self.btnBgColor;
     btn.normalBgColor = self.btnBgColor;
     [btn addTarget:self action:@selector(backEvent:) forControlEvents:UIControlEventTouchUpInside];
