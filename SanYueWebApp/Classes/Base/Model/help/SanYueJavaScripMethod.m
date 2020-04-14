@@ -37,6 +37,7 @@ static SanYueJavaScripMethod *_sharedInstance = nil;
             @"SanYue_setPopExtra",
             @"SanYue_navReplace",
             @"SanYue_restart",
+            @"SanYue_aboutList",
         ];
     }
     return _defaultJsMethods;

@@ -25,6 +25,7 @@
 #import "SanYueRouterItem.h"
 #import "SanYueToast.h"
 #import "SanYueActionSheetItem.h"
+#import "SanYueActionSheetController.h"
 @interface SanYueMainViewController ()<SanYueScriptMessageDelegate,WKNavigationDelegate,SanYueWebViewControllerRouterDelegate>
 @property (nonatomic,weak)UIView *loadAppView;
 @property (nonatomic,weak)UIView *errorView;
@@ -49,18 +50,6 @@
 @end
 @implementation SanYueMainViewController
 #pragma mark -- 懒加载
--(SanYueActionSheetItem *)aboutMsg{
-    if (!_aboutMsg) {
-        NSDictionary *dict = @{
-            @"itemList":@[@"重启"],
-            @"itemColor":@"#555555",
-            @"showCancel":@1,
-        };
-        SanYueActionSheetItem *item = [[SanYueActionSheetItem alloc] initWithDict:dict];
-        _aboutMsg = item;
-    }
-    return _aboutMsg;
-}
 -(SanYueManager *)manager{
     if(!_manager){
         _manager = [[SanYueManager alloc] initWith:_webAppItem.url];
@@ -277,11 +266,11 @@
     [self loadEvent];
 }
 -(void)aboutEvent{
-//    __weak typeof(self) weakSelf = self;
-//    SanYueAppAlertController *vc = [SanYueAppAlertController initActionSheet:self.aboutMsg handler:^(int index) {
-//        if (index == 0) { [weakSelf reStartApp:NO]; }
-//    }];
-//    [self presentViewController:vc animated:YES completion:nil];
+    __weak typeof(self) weakSelf = self;
+    SanYueActionSheetController *vc = [[SanYueActionSheetController alloc] initWithItem:_aboutMsg andHandler:^(int index) {
+        [weakSelf.jsManager aboutListSelect:index];
+    }];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 #pragma mark -- js 代理事件
 -(void)javaScriptMessageWithName:(NSString *)name andData:(NSDictionary *)data{}
@@ -418,6 +407,9 @@
     SanYueMainViewController *vc = [[SanYueMainViewController alloc] initWithURL:_webAppItem.url andNeedRef:reload];
     NSArray *vcs = @[vc];
     [self.navigationController setViewControllers:vcs animated:NO];
+}
+-(void)aboutList:(SanYueActionSheetItem *)item{
+    _aboutMsg = item;
 }
 #pragma mark -- SanYueWebViewControllerRouterDelegate 代理
 -(void)setUpPopDate:(NSDictionary *)dict{

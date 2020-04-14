@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)popViewController:(nullable NSDictionary *)dict andIsTooRoot:(BOOL)toRoot;
 -(void)setPopExtra:(NSDictionary *)data;
 -(void)reStartApp:(BOOL)reload;
+-(void)aboutList:(SanYueActionSheetItem *)item;
 @end
 
 @interface SanYueScriptMessageManager : NSObject<WKScriptMessageHandler>
@@ -43,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 事件
 -(void)appBecomeActive;
 -(void)viewActive:(NSDictionary *)dict;
+-(void)aboutListSelect:(int)index;
 -(void)viewHide;
 -(void)sceneModeChange:(UIUserInterfaceStyle)style API_AVAILABLE(ios(13.0));
 -(void)appBecomeNotActive;

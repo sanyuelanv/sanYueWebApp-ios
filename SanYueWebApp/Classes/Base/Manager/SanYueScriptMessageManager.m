@@ -56,7 +56,9 @@ API_AVAILABLE(ios(10.0))
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         @try { [self performSelector:selector withObject:message.body];}
-        @catch (NSException *exception) {}
+        @catch (NSException *exception) {
+            //NSLog(@"%@",exception.reason);
+        }
         @finally {}
         #pragma clang diagnostic pop
     }
@@ -172,10 +174,6 @@ API_AVAILABLE(ios(10.0))
         NSDictionary *res = @{ @"result":[NSNumber numberWithInt:index] };
         [weakSelf evaluateJavaScript:[NSString callBack:ID widthParame:res andError:nil andType:0]];
     }];
-//    SanYueAppAlertController *vc = [SanYueAppAlertController initActionSheet:item handler:^(int index) {
-//        NSDictionary *res = @{ @"result":[NSNumber numberWithInt:index] };
-//        [weakSelf evaluateJavaScript:[NSString callBack:ID widthParame:res andError:nil andType:0]];
-//    }];
     if (self.scriptDelegate) {
         if ([self.scriptDelegate respondsToSelector:@selector(presentViewController:animated:completion:)]) {
             [self.scriptDelegate presentAlertViewController:vc andCompletion:nil];
@@ -381,9 +379,23 @@ API_AVAILABLE(ios(10.0))
     [self evaluateJavaScript:[NSString callBack:ID widthParame:res andError:nil andType:0]];
 }
 -(void)SanYue_restart:(NSDictionary *)data{
+    BOOL clearCache = NO;
+    if([data[@"data"][@"clearCache"] isEqual:[NSNull null]] || data[@"data"][@"clearCache"] == nil ){ clearCache = NO; }
+    else{
+        int i = [data[@"data"][@"clearCache"] intValue];
+        clearCache = i == 1;
+    }
     if (self.scriptDelegate) {
         if ([self.scriptDelegate respondsToSelector:@selector(reStartApp:)]) {
-            [self.scriptDelegate reStartApp:YES];
+            [self.scriptDelegate reStartApp:clearCache];
+        }
+    }
+}
+-(void)SanYue_aboutList:(NSDictionary *)data{
+    SanYueActionSheetItem *item = [[SanYueActionSheetItem alloc] initWithDict:data[@"data"]];
+    if (self.scriptDelegate) {
+        if ([self.scriptDelegate respondsToSelector:@selector(aboutList:)]) {
+            [self.scriptDelegate aboutList:item];
         }
     }
 }
@@ -429,6 +441,10 @@ API_AVAILABLE(ios(10.0))
         NSDictionary *res = style == UIUserInterfaceStyleDark ? @{ @"mode" : @"dark" } : @{ @"mode" : @"light" };
         [self evaluateJavaScript:[NSString callBack:@"SceneMode" widthParame:res andError:nil andType:2]];
     }
+}
+-(void)aboutListSelect:(int)index{
+    NSDictionary *res = @{ @"index" : [NSNumber numberWithInt:index]};
+    [self evaluateJavaScript:[NSString callBack:@"AboutListSelect" widthParame:res andError:nil andType:2]];
 }
 #pragma mark -- helper 事件
 -(void)evaluateJavaScript:(NSString *)func{
