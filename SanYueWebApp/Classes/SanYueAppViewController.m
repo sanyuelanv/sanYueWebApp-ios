@@ -14,6 +14,8 @@
 #import "SanYueAppInfoItem.h"
 #import "SanYueHttpManager.h"
 #import "SanYueWebAppItem.h"
+#import "NSURLProtocol+SanYueEctension.h"
+#import "SanYueWebviewProtocol.h"
 
 @interface SanYueAppViewController ()<UIViewControllerTransitioningDelegate,UIGestureRecognizerDelegate>
 @property (nonatomic,strong)SanYuePanInteractiveTransition *panInteractiveTransition;
@@ -71,6 +73,11 @@
 }
 -(instancetype)initWithViewController:(SanYueMainViewController *)vc widthNeedDeBug:(BOOL)needDeBug withNetworkWatching:(nullable NSString *)watchURL{
     self = [super initWithRootViewController:vc];
+    // 加入网络拦截
+    [NSURLProtocol registerClass:[SanYueWebviewProtocol class]];
+    [NSURLProtocol WebKitRegisterScheme:@"webp"];
+    [NSURLProtocol WebKitRegisterScheme:@"webps"];
+    [NSURLProtocol WebKitRegisterScheme:@"file"];
     if (self) {
         self.needDeBug = needDeBug;
         if (watchURL) { [self startNetworkWatching:watchURL]; }
@@ -125,6 +132,10 @@
     [SanYueAppInfoItem deletInstance];
     [SanYueHttpManager deletInstance];
     [SanYueWebAppItem deletInstance];
+    
+    [NSURLProtocol WebKitUnregisterScheme:@"webp"];
+    [NSURLProtocol WebKitUnregisterScheme:@"webps"];
+    [NSURLProtocol unregisterClass:[SanYueWebviewProtocol class]];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.childViewControllers.count >= 1) {

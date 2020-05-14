@@ -26,6 +26,12 @@
     ],
     "SSZipArchive": [
       "~> 2.1.4"
+    ],
+    "YYImage": [
+      "~> 1.0.4"
+    ],
+    "YYImage/WebP": [
+      "~> 1.0.4"
     ]
   },
   "resource_bundles": {

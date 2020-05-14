@@ -36,6 +36,8 @@ TODO: Add long description of the pod here.
   s.frameworks = 'AudioToolbox'
   s.dependency 'AFNetworking', '~> 3.2'
   s.dependency 'SSZipArchive', '~> 2.1.4'
+  s.dependency 'YYImage', '~> 1.0.4'
+  s.dependency 'YYImage/WebP', '~> 1.0.4'
   s.resource_bundles = {
     'SanYueWebApp' => ['SanYueWebApp/Assets/*.xcassets','SanYueWebApp/Assets/*.js']
   }

@@ -71,7 +71,7 @@
     [self reloadEvent];
 }
 - (void)btnEvent{
-    SanYueAppViewController *app = [[SanYueAppViewController alloc] initWithURL:@"http://172.16.0.44:3000/app.zip?dfafda" widthNeedDeBug:_isDebug withNetworkWatching:@"www.baidu.com"];
+    SanYueAppViewController *app = [[SanYueAppViewController alloc] initWithURL:@"http://192.168.50.197:3000/app.zip?dfafda" widthNeedDeBug:_isDebug withNetworkWatching:@"www.baidu.com"];
     app.timeoutInterval = 20.0f;
     [self presentViewController:app animated:YES completion:nil];
 }
